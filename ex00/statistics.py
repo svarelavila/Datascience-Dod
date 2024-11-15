@@ -56,8 +56,13 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
             print("ERROR")
         else:
             # Diccionario para asignar la operación correspondiente
-            operations = {"mean": mean, "median": median,
-                      "quartile": quartile, "std": std, "var": var}
+            operations = {
+                            "mean": mean,
+                            "median": median,
+                            "quartile": quartile,
+                            "std": std,
+                            "var": var
+                        }
             # Verificar si la operación es válida
             if operations.get(op):
                 print(f"{op} : {operations.get(op)(ls)}")
@@ -66,12 +71,12 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
 
     # Filtrar y validar valores numéricos en `*args`
     nums = [x for x in args if isinstance(x, (int, float))]
-    
+
     # Comprobación si `kwargs` contiene claves válidas
     valid_ops = {"mean", "median", "quartile", "std", "var"}
     if not any(k in valid_ops for k in kwargs.values()):
         print("ERROR")
         return
-    
+
     # Ejecutar operaciones solicitadas
     [do_op(kwargs[k], nums) for k in kwargs if kwargs[k] in valid_ops]

@@ -1,30 +1,36 @@
+from functools import wraps
 from typing import Any
 
 
 def callLimit(limit: int):
-    """Decorator to limit the number of times a function can be called."""
+    """
+    Takes a 'limit' to restrict times a decorated funct. can be called.
 
+    Parameters:
+    limit (int): Number of times the function can be called.
+
+    Returns:
+    function: A decorator that restricts the number of times
+    a function can be called.
+    """
     count = 0
 
     def callLimiter(function):
-        """
-        Wrapper function to limit the number of times a function can be called.
-        """
+        """object to return wrapped function"""
 
+        @wraps(function)
         def limit_function(*args: Any, **kwds: Any):
             """
-            Function to limit the number of times a function can be called.
+            wrapped function with limiting logic.If it is over the limit,
+            is raised an error.
             """
-
             nonlocal count
-
             if count < limit:
-                result = function(*args, **kwds)
                 count += 1
-                return result
-
-            print(f"Error: {function} call too many times")
-
+                return function(*args, **kwds)
+            else:
+                print(f"Error: {function} call too many times")
+                return
         return limit_function
 
     return callLimiter
