@@ -5,7 +5,7 @@ def main():
     """Main function to test the Student class."""
 
     try:
-        student = Student(name="Edward", surname="agle")
+        student = Student(name="", surname="")
         print(student)
 
         student = Student(name="Edward", surname="agle", id="toto")
