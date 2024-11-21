@@ -4,20 +4,21 @@ from math import sqrt
 
 def ft_statistics(*args: Any, **kwargs: Any) -> None:
     """
-    Calculate statistical measures, including mean, median, quartile,
-    standard deviation, and variance, based on the provided  arguments.
-    It supports keyword arguments to request specific statistical
-    measures for printing.
+    Calculates statistical measures such as mean, median,
+    quartiles, standard deviation, and variance based on
+    the provided positional arguments. Allows specific measures
+    to be printed using keyword arguments.
 
     Parameters:
-    *args (Any): Variable number of positional arguments
-    representing values for calculations.
-    **kwargs (Any): Keyword arguments indicating the
-    requested statistical measures for printing.
+    - *args (Any): Positional arguments containing numerical
+    values for calculations.
+    - **kwargs (Any): Keyword arguments specifying which
+    statistical measures to print.
 
     Returns:
-    None: The function doesn't return any value.
-    It prints the requested statistical measures."""
+    - None: The function does not return a value; it prints
+    the requested results.
+    """
 
     def mean(ls: list[int | float]) -> float:
         """Calculate the Mean"""
@@ -55,7 +56,7 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
             print("ERROR")
         else:
             operations = {"mean": mean, "median": median,
-                      "quartile": quartile, "std": std, "var": var}
+                    "quartile": quartile, "std": std, "var": var}
             if operations.get(op):
                 print(f"{op} : {operations.get(op)(ls)}")
 
