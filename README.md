@@ -1,6 +1,6 @@
-# 📊 Piscine Python for Data Science - Data-Oriented Design
+# 📊 Piscine Python for Data Science - DOD
 <p aling="justify">
-Este proyecto está diseñado para introducir y practicar principios de diseño orientado a datos (Data-Oriented Design) utilizando Python. A través de ejercicios prácticos, se aprenderán técnicas de manipulación de datos, funciones avanzadas y el uso de decoradores, todo ello con un enfoque en la estructura y eficiencia del código.
+Este proyecto está diseñado para introducir y practicar principios de <strong>diseño orientado a datos (Data-Oriented Design)</strong> utilizando Python. A través de ejercicios prácticos, se aprenderán técnicas de manipulación de datos, funciones avanzadas y el uso de decoradores, todo ello con un enfoque en la estructura y eficiencia del código.
 </p>
 
 ### 🧩 Ejercicios
@@ -13,3 +13,7 @@ Este proyecto está diseñado para introducir y practicar principios de diseño 
 | **ex03** | Implementa una clase de datos que genera automáticamente un login y un ID único para estudiantes. |
 
 ### 🏆 Evaluación
+
+<p align="left">
+  <img src="https://github.com/svarelavila/svarelavila/blob/main/imagenes/ok_100.png" alt="logo" width="125"/>
+</p>
